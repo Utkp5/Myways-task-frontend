@@ -1,0 +1,63 @@
+.div_center
+{
+    text-align: center;
+    /* border: 2px solid red; */
+    padding: 10px 10px;
+    background-color: cadetblue;
+}
+.card
+{
+    border: 2px solid;
+    height: 180px;
+    width: 330px;
+    background: orangered;
+    border-radius: 5px;
+    border: 2px solid transparent;
+}
+.title
+{
+    /* border: 1px solid red; */
+    height: 50px;
+    display: flex;
+    padding: 0px 10px;
+    border-bottom: 2px solid gainsboro ;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.div_flex
+{
+        margin: 50px 40px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+}
+.btn_center
+{
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.btn_add
+{
+    padding: 6px 28px;
+    font-size: 25px;
+    background: gold;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+.des {
+    padding: 1px 10px;
+}
+
+input[type="text"]
+{
+   width: 20rem;
+   border-radius: 3px;
+   padding: 0 10px;
+   font-size: larger;
+   border: none;
+   outline: none;
+}
