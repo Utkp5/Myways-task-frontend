@@ -4,7 +4,7 @@ import { FaPencilAlt } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa";
 import { FaRegTrashAlt } from "react-icons/fa";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 
 function Home() {
 
@@ -100,7 +100,7 @@ const deleteTodo = async(id) => {
             <div className="card" key={dis._id}>
                 <div className="title">
                     <p>{dis.title}</p>
-                    <p><FaPencilAlt size={19}/>&nbsp;&nbsp;&nbsp;&nbsp;<FaRegTrashAlt size={19} onClick={() => deleteTodo(dis._id)}/></p>
+                    <p><NavLink to="/Update-message"><FaPencilAlt size={19}/></NavLink> &nbsp;&nbsp;&nbsp;&nbsp;<FaRegTrashAlt size={19} onClick={() => deleteTodo(dis._id)}/></p>
                 </div>
                 <p className="des">{dis.description}</p>
             </div>

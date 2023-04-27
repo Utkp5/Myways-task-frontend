@@ -1,11 +1,18 @@
-import React from 'react'
-import './Update.css';
+import React from "react";
+import "../Home/Home.css";
+
 function Update() {
   return (
     <div>
-      hello update
+    
+        <div className="div_center">
+          <h2>Pandit Utkarsh Myways Task</h2>
+        </div>
+
+
+
     </div>
-  )
+  );
 }
 
-export default Update
+export default Update;
