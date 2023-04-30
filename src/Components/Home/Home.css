@@ -68,3 +68,46 @@ input[type="text"]
    border: none;
    outline: none;
 }
+
+.block
+{
+    display: flex;
+    flex-direction: column;
+    margin: 90px 200px;  
+}
+.input-res
+{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* font: 15px/1 'Open Sans', sans-serif; */
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  max-width: 500px;
+  background-color: #ddd;
+  border: none;
+  padding: 10px 11px 11px 11px;
+  border-radius: 3px;
+  box-shadow: none;
+  outline: none;
+  margin: 0;
+  margin-left: 100px;
+  box-sizing: border-box; 
+}
+.input-res1
+{
+    background-color: #ddd;
+    border-radius: 3px;
+}
+
+.label1
+{
+    height: 40px;
+    font-size: xx-large;
+}
+.label2 {
+    display: flex;
+    font-size: xx-large;
+}

@@ -5,6 +5,8 @@ import { FaPlus } from "react-icons/fa";
 import { FaRegTrashAlt } from "react-icons/fa";
 import axios from "axios";
 import { NavLink, useParams } from "react-router-dom";
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
+
 
 function Home() {
 
@@ -17,7 +19,7 @@ function Home() {
 
         try {
             const card = {title,description}
-            const data = await axios.post("http://localhost:5000/api/createTodo", card)
+            const data = await axios.post("https://zany-jade-reindeer-sari.cyclic.app/api/createTodo", card)
                 if (data) {
                    console.log(data.data); 
                    console.log(`message created successfully`);
@@ -46,7 +48,7 @@ function Home() {
 
     const diplaytodo = async() => {
 
-      const res =  await axios.get("http://localhost:5000/api/displayTodo")
+      const res =  await axios.get("https://zany-jade-reindeer-sari.cyclic.app/api/displayTodo")
       const final = res.data;
       
       if (final) {
@@ -67,7 +69,7 @@ function Home() {
 // const {id} = useParams();
 const deleteTodo = async(id) => {
 
-  const res =  await axios.delete(`http://localhost:5000/api/deleteTodo/${id}`)
+  const res =  await axios.delete(`https://zany-jade-reindeer-sari.cyclic.app/api/deleteTodo/${id}`)
   clearf();
   console.log(res.id);
 
@@ -100,7 +102,7 @@ const deleteTodo = async(id) => {
             <div className="card" key={dis._id}>
                 <div className="title">
                     <p>{dis.title}</p>
-                    <p><NavLink to="/Update-message"><FaPencilAlt size={19}/></NavLink> &nbsp;&nbsp;&nbsp;&nbsp;<FaRegTrashAlt size={19} onClick={() => deleteTodo(dis._id)}/></p>
+                    <p><FaPencilAlt size={19} onClick={() =>  window.location.href = "/Update-message/" + dis._id } />&nbsp;&nbsp;&nbsp;&nbsp;<FaRegTrashAlt size={19} onClick={() => deleteTodo(dis._id)}/></p>
                 </div>
                 <p className="des">{dis.description}</p>
             </div>
